@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Estimate the cost of your website instantly. Choose your website type, pages, and features to get a realistic price and delivery estimate." />
+  <title>Website Price Calculator | Get Your Instant Estimate</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="4" y="2" width="16" height="20" rx="2" />
+              <line x1="8" y1="6" x2="16" y2="6" />
+              <line x1="8" y1="10" x2="16" y2="10" />
+              <line x1="8" y1="14" x2="12" y2="14" />
+              <line x1="8" y1="18" x2="12" y2="18" />
+            </svg>
+          </span>
+          <span class="logo-text" data-t="header_title">Website Prijs Calculator</span>
+        </div>
+        <div class="header-actions">
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="nl">NL</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title" data-t="hero_title">
+          Bereken de geschatte prijs van jouw website
+        </h1>
+        <p class="hero-subtitle" data-t="hero_text">
+          Kies het type website, het aantal pagina’s en extra functies om een snelle prijsindicatie en geschatte
+          oplevertijd te ontvangen.
+        </p>
+        <!-- Progress bar -->
+        <div class="progress-bar-wrapper" aria-label="Calculator progress">
+          <div class="progress-steps">
+            <div class="progress-step active" data-step="1">
+              <span class="step-number">1</span>
+              <span class="step-label" data-t="step_type">Type website</span>
+            </div>
+            <div class="progress-connector"></div>
+            <div class="progress-step" data-step="2">
+              <span class="step-number">2</span>
+              <span class="step-label" data-t="step_pages">Aantal pagina’s</span>
+            </div>
+            <div class="progress-connector"></div>
+            <div class="progress-step" data-step="3">
+              <span class="step-number">3</span>
+              <span class="step-label" data-t="step_features">Extra functies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CALCULATOR SECTION ========== -->
+  <main class="calculator-section">
+    <div class="container">
+
+      <!-- ===== STEP 1: WEBSITE TYPE ===== -->
+      <section class="calc-step" id="step-type" aria-labelledby="step1-heading">
+        <div class="step-header">
+          <h2 class="step-title" id="step1-heading" data-t="step_type">Type website</h2>
+        </div>
+
+        <div class="type-grid" role="group" aria-label="Website type options">
+
+          <button class="type-card" id="type-business" data-type="business" aria-pressed="false">
+            <span class="type-checkmark" aria-hidden="true">✓</span>
+            <span class="type-icon" aria-hidden="true">
+              <!-- Briefcase icon -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                <line x1="12" y1="12" x2="12" y2="16" />
+                <line x1="10" y1="14" x2="14" y2="14" />
+              </svg>
+            </span>
+            <span class="type-name" data-t="type_business">Zakelijke Website</span>
+            <span class="type-price-tag" data-t="type_business_price">€250</span>
+          </button>
+
+          <button class="type-card" id="type-portfolio" data-type="portfolio" aria-pressed="false">
+            <span class="type-checkmark" aria-hidden="true">✓</span>
+            <span class="type-icon" aria-hidden="true">
+              <!-- User icon -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </span>
+            <span class="type-name" data-t="type_portfolio">Portfolio Website</span>
+            <span class="type-price-tag" data-t="type_portfolio_price">€180</span>
+          </button>
+
+          <button class="type-card" id="type-landing" data-type="landing" aria-pressed="false">
+            <span class="type-checkmark" aria-hidden="true">✓</span>
+            <span class="type-icon" aria-hidden="true">
+              <!-- Target icon -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
+            </span>
+            <span class="type-name" data-t="type_landing">Landing Pagina</span>
+            <span class="type-price-tag" data-t="type_landing_price">€120</span>
+          </button>
+
+          <button class="type-card" id="type-informational" data-type="informational" aria-pressed="false">
+            <span class="type-checkmark" aria-hidden="true">✓</span>
+            <span class="type-icon" aria-hidden="true">
+              <!-- Info icon -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="16" x2="12" y2="12" />
+                <line x1="12" y1="8" x2="12.01" y2="8" />
+              </svg>
+            </span>
+            <span class="type-name" data-t="type_informational">Informatieve Website</span>
+            <span class="type-price-tag" data-t="type_informational_price">€200</span>
+          </button>
+
+          <button class="type-card" id="type-ecommerce" data-type="ecommerce" aria-pressed="false">
+            <span class="type-checkmark" aria-hidden="true">✓</span>
+            <span class="type-icon" aria-hidden="true">
+              <!-- Shopping bag icon -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+            </span>
+            <span class="type-name" data-t="type_ecommerce">Kleine Webshop</span>
+            <span class="type-price-tag" data-t="type_ecommerce_price">€450</span>
+          </button>
+
+          <!-- 💡 TIP: To add a new Website Type, copy-paste one of the buttons above. 
+               Make sure the 'data-type' matches the key you add in js/main.js -->
+        </div>
+      </section>
+
+      <!-- ===== STEP 2: NUMBER OF PAGES ===== -->
+      <section class="calc-step" id="step-pages" aria-labelledby="step2-heading">
+        <div class="step-header">
+          <h2 class="step-title" id="step2-heading" data-t="step_pages">Aantal pagina’s</h2>
+        </div>
+
+        <div class="pages-grid" role="group" aria-label="Number of pages options">
+
+          <button class="page-card" id="pages-1" data-pages="1" aria-pressed="false">
+            <span class="page-checkmark" aria-hidden="true">✓</span>
+            <span class="page-number">1</span>
+            <span class="page-label" data-t="pages_1">1 pagina</span>
+            <span class="page-extra" data-t="pages_1_extra">Inbegrepen</span>
+          </button>
+
+          <button class="page-card" id="pages-3" data-pages="3" aria-pressed="false">
+            <span class="page-checkmark" aria-hidden="true">✓</span>
+            <span class="page-number">3</span>
+            <span class="page-label" data-t="pages_3">3 pagina’s</span>
+            <span class="page-extra" data-t="pages_3_extra">+€80</span>
+          </button>
+
+          <button class="page-card" id="pages-5" data-pages="5" aria-pressed="false">
+            <span class="page-checkmark" aria-hidden="true">✓</span>
+            <span class="page-number">5</span>
+            <span class="page-label" data-t="pages_5">5 pagina’s</span>
+            <span class="page-extra" data-t="pages_5_extra">+€150</span>
+          </button>
+
+          <button class="page-card" id="pages-7plus" data-pages="7" aria-pressed="false">
+            <span class="page-checkmark" aria-hidden="true">✓</span>
+            <span class="page-number">7+</span>
+            <span class="page-label" data-t="pages_7">7+ pagina’s</span>
+            <span class="page-extra" data-t="pages_7_extra">+€250</span>
+          </button>
+
+        </div>
+      </section>
+
+      <!-- ===== STEP 3: OPTIONAL FEATURES ===== -->
+      <section class="calc-step" id="step-features" aria-labelledby="step3-heading">
+        <div class="step-header">
+          <h2 class="step-title" id="step3-heading" data-t="step_features">Extra functies</h2>
+        </div>
+
+        <div class="features-grid" role="group" aria-label="Optional features">
+
+          <!-- Contact Form -->
+          <label class="feature-card" for="feat-contact">
+            <input type="checkbox" id="feat-contact" data-feature="contact" aria-describedby="feat-contact-desc" />
+            <span class="feature-check-indicator" aria-hidden="true"></span>
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </span>
+            <span class="feature-info">
+              <span class="feature-name" data-t="feat_contact">Contactformulier</span>
+            </span>
+            <span class="feature-price" data-t="feat_contact_price">+€40</span>
+          </label>
+
+          <!-- WhatsApp Integration -->
+          <label class="feature-card" for="feat-whatsapp">
+            <input type="checkbox" id="feat-whatsapp" data-feature="whatsapp" aria-describedby="feat-whatsapp-desc" />
+            <span class="feature-check-indicator" aria-hidden="true"></span>
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+            </span>
+            <span class="feature-info">
+              <span class="feature-name" data-t="feat_whatsapp">WhatsApp Integratie</span>
+            </span>
+            <span class="feature-price" data-t="feat_whatsapp_price">+€20</span>
+          </label>
+
+          <!-- Gallery Section -->
+          <label class="feature-card" for="feat-gallery">
+            <input type="checkbox" id="feat-gallery" data-feature="gallery" aria-describedby="feat-gallery-desc" />
+            <span class="feature-check-indicator" aria-hidden="true"></span>
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+            </span>
+            <span class="feature-info">
+              <span class="feature-name" data-t="feat_gallery">Galerij Sectie</span>
+            </span>
+            <span class="feature-price" data-t="feat_gallery_price">+€35</span>
+          </label>
+
+          <!-- Multi-language Support -->
+          <label class="feature-card" for="feat-multilang">
+            <input type="checkbox" id="feat-multilang" data-feature="multilang" />
+            <span class="feature-check-indicator" aria-hidden="true"></span>
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+            </span>
+            <span class="feature-info">
+              <span class="feature-name" data-t="feat_multilang">Meertalige Ondersteuning</span>
+            </span>
+            <span class="feature-price" data-t="feat_multilang_price">+€120</span>
+          </label>
+
+          <!-- Booking Form -->
+          <label class="feature-card" for="feat-booking">
+            <input type="checkbox" id="feat-booking" data-feature="booking" aria-describedby="feat-booking-desc" />
+            <span class="feature-check-indicator" aria-hidden="true"></span>
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </span>
+            <span class="feature-info">
+              <span class="feature-name" data-t="feat_booking">Boekingsformulier</span>
+            </span>
+            <span class="feature-price" data-t="feat_booking_price">+€150</span>
+          </label>
+
+          <!-- Basic SEO Setup -->
+          <label class="feature-card" for="feat-seo">
+            <input type="checkbox" id="feat-seo" data-feature="seo" aria-describedby="feat-seo-desc" />
+            <span class="feature-check-indicator" aria-hidden="true"></span>
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </span>
+            <span class="feature-info">
+              <span class="feature-name" data-t="feat_seo">Basis SEO Setup</span>
+            </span>
+            <span class="feature-price" data-t="feat_seo_price">+€60</span>
+          </label>
+
+          <!-- Custom Design -->
+          <label class="feature-card" for="feat-design">
+            <input type="checkbox" id="feat-design" data-feature="design" aria-describedby="feat-design-desc" />
+            <span class="feature-check-indicator" aria-hidden="true"></span>
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="13.5" cy="6.5" r=".5" />
+                <circle cx="17.5" cy="10.5" r=".5" />
+                <circle cx="8.5" cy="7.5" r=".5" />
+                <circle cx="6.5" cy="12.5" r=".5" />
+                <path
+                  d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+              </svg>
+            </span>
+            <span class="feature-info">
+              <span class="feature-name" data-t="feat_design">Maatwerk Ontwerp</span>
+            </span>
+            <span class="feature-price" data-t="feat_design_price">+€180</span>
+          </label>
+
+          <!-- Blog Section -->
+          <label class="feature-card" for="feat-blog">
+            <input type="checkbox" id="feat-blog" data-feature="blog" aria-describedby="feat-blog-desc" />
+            <span class="feature-check-indicator" aria-hidden="true"></span>
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+            </span>
+            <span class="feature-info">
+              <span class="feature-name" data-t="feat_blog">Blog Sectie</span>
+            </span>
+            <span class="feature-price" data-t="feat_blog_price">+€100</span>
+          </label>
+
+          <!-- 💡 TIP: To add a new Feature, copy-paste one of the labels above. 
+               Ensure the 'id' and 'for' are unique, and 'data-feature' matches js/main.js -->
+        </div>
+      </section>
+
+      <!-- ===== CALCULATE BUTTON ===== -->
+      <div class="calculate-cta">
+        <!-- Validation error message -->
+        <p class="validation-msg hidden" id="calc-validation" role="alert" aria-live="polite">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          <span data-t="validation_message">Selecteer alstublieft een websitetype en pagina's.</span>
+        </p>
+        <div class="calculate-btn-wrapper">
+          <button class="btn-calculate" id="btn-calculate" aria-label="Calculate price estimate">
+            <span class="btn-calc-glow"></span>
+            <span class="btn-calc-text" data-t="calculate_btn">Bereken prijs</span>
+            <svg class="btn-calc-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ===== RESULT SECTION ===== -->
+      <section class="result-section hidden" id="result-section" aria-labelledby="result-heading" aria-live="polite">
+        <h2 class="result-title" id="result-heading" data-t="result_title">Jouw schatting</h2>
+        <div class="result-grid">
+
+          <!-- Price Card -->
+          <div class="result-card result-card--price">
+            <div class="result-card-inner">
+              <div class="result-icon-box price-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23" />
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+              </div>
+              <div class="result-info">
+                <span class="result-label" data-t="result_price">Geschatte prijs</span>
+                <p class="result-value" id="result-price">--</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Delivery Card -->
+          <div class="result-card result-card--time">
+            <div class="result-card-inner">
+              <div class="result-icon-box time-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <div class="result-info">
+                <span class="result-label" data-t="result_delivery">Geschatte oplevertijd</span>
+                <p class="result-value" id="result-time">--</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Summary -->
+        <div class="result-summary">
+          <h3 class="summary-title" data-t="result_options">Geselecteerde opties</h3>
+          <ul class="summary-list" id="summary-list" aria-label="Selected options summary">
+            <!-- Summary items are injected by JS -->
+          </ul>
+          <p class="result-disclaimer" data-t="disclaimer">Dit is een geschatte prijs ter demonstratie. De uiteindelijke
+            prijs kan variëren afhankelijk van de omvang en vereisten van het project.</p>
+        </div>
+
+        <!-- CTA & Reset -->
+        <div class="result-actions">
+          <p class="cta-note" data-t="cta_text">Interesse in een website? Neem contact op voor een offerte op maat.</p>
+          <a href="mailto:maen2zaza3@outlook.com?subject=Website%20Enquiry" class="btn-primary" id="btn-contact">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            Contact
+          </a>
+          <button class="btn-reset" id="btn-reset" aria-label="Reset the calculator" data-t="reset_btn">
+            Reset
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy" data-t="footer_copy">&copy; 2026 WebCalc &mdash; Gebouwd voor freelancers &amp; bureaus.
+        </p>
+        <p class="footer-note" data-t="footer_note">Prijzen zijn schattingen. De uiteindelijke prijs kan variëren op
+          basis van de complexiteit.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
